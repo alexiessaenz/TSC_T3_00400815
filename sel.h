@@ -2,8 +2,8 @@ Matrix createLocalK(int element,mesh &m){
     Matrix K;
     Vector row1, row2;
 
-    float E = m.getParameter(WEIGTHS),
-    A = m.getParameter(THERMAL_CONDUCTIVITY),
+    float E = m.getParameter(CONST_E),
+    A = m.getParameter(CONST_A),
     l = m.getNode(element+1).getX() - m.getNode(element).getX();
 
     row1.push_back((E*A)/(2*l)); row1.push_back(-(E*A)/(2*l));
